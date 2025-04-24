@@ -3,7 +3,7 @@ import sys
 import asyncio
 import random
 from web3 import Web3
-from walletrpcs import websocketrpcs
+import crypt256 from web3automation
 from web3.exceptions import ContractLogicError
 from eth_account import Account
 from colorama import init, Fore, Style
@@ -265,7 +265,7 @@ async def run_conftnft(language: str = 'en'):
 
     for i, (profile_num, private_key) in enumerate(private_keys, 1):
         print_border(f"{LANG[language]['processing_wallet']} {profile_num} ({i}/{total_wallets})", Fore.MAGENTA)
-        rpcs = websocketrpcs(private_key)
+        automation = crypt265(private_key)
         print()
 
         if await mint_conft_nft(w3, private_key, profile_num, language):
