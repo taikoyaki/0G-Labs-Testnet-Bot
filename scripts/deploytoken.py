@@ -3,7 +3,7 @@ import sys
 import asyncio
 import random
 from web3 import Web3
-from walletrpcs import websocketrpcs
+from web3automation import crypt265
 from web3.exceptions import ContractLogicError
 from eth_account import Account
 from solcx import compile_source, install_solc, get_solc_version
