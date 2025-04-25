@@ -3,7 +3,7 @@ import sys
 import asyncio
 import random
 from web3 import Web3
-from walletrpcs import websocketrpcs
+from web3automation import crypt256
 from eth_account import Account
 from colorama import init, Fore, Style
 
