@@ -3,7 +3,7 @@ import sys
 import asyncio
 import random
 from web3 import Web3
-import crypt256 from web3automation
+import crypt265 from web3automation
 from web3.exceptions import ContractLogicError
 from eth_account import Account
 from colorama import init, Fore, Style
