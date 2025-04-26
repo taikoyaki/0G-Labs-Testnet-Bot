@@ -3,6 +3,6 @@ web3
 colorama
 py-solc-x
 eth-account
-web3automation
+alchemyrpcs
 aiohttp
 loguru   
